@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
 import { villains } from './villains.js'
+import './App.css'
 
 class App extends Component {
   constructor() {
@@ -24,8 +25,8 @@ class App extends Component {
     })
 
     return (
-      <div>
-        <h1>Spider-Man's Greatest Nemeses</h1>
+      <div className = 'tc'>
+        <h1 className='f1'>Spider-Man's Greatest Nemeses</h1>
         <SearchBox onSearchChange={this.onSearchChange}/>
         <CardList villains={filteredVillains} />
       </div>

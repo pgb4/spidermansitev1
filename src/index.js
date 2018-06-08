@@ -6,8 +6,6 @@ import registerServiceWorker from './registerServiceWorker';
 import 'tachyons';
 
 ReactDOM.render(
-  <div className="bg-light-red tc">
-    <App />
-  </div>,
-  document.getElementById('root'));
+    <App />,
+    document.getElementById('root'));
 registerServiceWorker();
