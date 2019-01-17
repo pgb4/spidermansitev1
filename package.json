@@ -13,5 +13,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "stop": "taskkill -F -IM node.exe"
+  },
+  "devDependencies": {
+    "tachyons": "^4.10.0"
   }
 }

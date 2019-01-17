@@ -9,7 +9,7 @@ export const villains = [
     id: 2,
     name: 'Green Goblin',
     alias: 'Norman Osborn',
-    imgSrc: 'http://assets.boundingintocomics.com/content/uploads/2017/12/Green-Goblin.png'
+    imgSrc: 'https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-avengers/3/33/Norman_Osborn.jpg'
   },
   {
     id: 3,
