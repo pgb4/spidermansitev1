@@ -1,13 +1,13 @@
 export const allies = [
   {
     id: 1,
-    name: 'The Fuckboy',
+    name: 'Lizard People',
     alias: 'Curt Connors',
     imgSrc: 'http://planetill.com/wp-content/uploads/2012/05/the-Lizard1.jpg'
   },
   {
     id: 2,
-    name: 'Dickhead Goblin',
+    name: 'No. 1 Fuckboy',
     alias: 'Norman Osborn',
     imgSrc: 'https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-avengers/3/33/Norman_Osborn.jpg'
   },
