@@ -11,6 +11,7 @@ class App extends Component {
     super()
     this.state = {
       route: 'Villains',
+      notRoute: 'Allies',
       villains: villains,
       allies: allies,
       searchfield: ''
@@ -26,11 +27,13 @@ class App extends Component {
   groupChange = () => {
     if(this.state.route==='Villains') {
       this.setState({
-        route: 'Allies'
+        route: 'Allies',
+        notRoute: 'Villains'
       })
     } else {
       this.setState({
-        route: 'Villains'
+        route: 'Villains',
+        notRoute: 'Allies'
       })
     }
   }
@@ -49,12 +52,12 @@ class App extends Component {
           ? <Sticky>
               <h1 className='f1'>Spider-Man's Greatest Nemeses</h1>
               <SearchBox onSearchChange={this.onSearchChange} route={this.state.route}/>
-              <button onClick={this.groupChange}>Switch to {this.state.route}</button>
+              <button onClick={this.groupChange}>Switch to {this.state.notRoute}</button><br />
             </Sticky>
           : <Sticky>
               <h1 className='f1'>Spider-Man's Greatest Allies</h1>
               <SearchBox onSearchChange={this.onSearchChange} route={this.state.route}/>
-              <button onClick={this.groupChange}>Switch to Allies</button>
+              <button onClick={this.groupChange}>Switch to {this.state.notRoute}</button><br />
             </Sticky>
         }
           <div style={{paddingTop: '280px', zIndex: '0', overflow: 'auto', width: '100%', background: 'linear-gradient(to right, rgba(165,0,0,1) 0%, rgba(50,104,189,1) 100%'}}>

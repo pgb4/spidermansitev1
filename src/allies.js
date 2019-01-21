@@ -1,9 +1,9 @@
 export const allies = [
   {
     id: 1,
-    name: 'Lizard People',
-    alias: 'Curt Connors',
-    imgSrc: 'http://planetill.com/wp-content/uploads/2012/05/the-Lizard1.jpg'
+    name: 'Daredevil',
+    alias: 'Matt Murdoch',
+    imgSrc: 'https://seveninchesofyourtime.com/wp-content/uploads/2015/04/DD-featured-1.jpg'
   },
   {
     id: 2,
