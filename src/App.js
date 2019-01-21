@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      route: 'allies',
+      route: 'nemeses',
       villains: villains,
       allies: allies,
       searchfield: ''
@@ -45,10 +45,16 @@ class App extends Component {
 
     return (
       <div className = 'tc'>
-        <Sticky>
-          <h1 className='f1'>Spider-Man's Greatest Nemeses</h1>
-          <SearchBox onSearchChange={this.onSearchChange}/>
-        </Sticky>
+        {this.state.route==='nemeses'
+          ? <Sticky>
+              <h1 className='f1'>Spider-Man's Greatest Nemeses</h1>
+              <SearchBox onSearchChange={this.onSearchChange} route={this.state.route}/>
+            </Sticky>
+          : <Sticky>
+              <h1 className='f1'>Spider-Man's Greatest Allies</h1>
+              <SearchBox onSearchChange={this.onSearchChange} route={this.state.route}/>
+            </Sticky>
+        }
           <div style={{paddingTop: '280px', zIndex: '0', overflow: 'auto', width: '100%', background: 'linear-gradient(to right, rgba(165,0,0,1) 0%, rgba(50,104,189,1) 100%'}}>
             <CardList villains={filteredVillains} allies={filteredAllies} route={this.state.route}/>
           </div>
