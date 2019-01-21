@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card.js';
 
 const CardList = ({ villains, allies, route }) => {
-  if(route==='nemeses') {
+  if(route==='Villains') {
     return (
       <div> {
         villains.map(villain => {
