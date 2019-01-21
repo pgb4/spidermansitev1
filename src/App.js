@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      route: 'nemeses',
+      route: 'allies',
       villains: villains,
       allies: allies,
       searchfield: ''
