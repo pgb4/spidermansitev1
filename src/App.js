@@ -23,17 +23,17 @@ class App extends Component {
     })
   }
 //review your most advanced project to try to understand how you can better set up a way to switch between heroes/villains--like login page
-  // onGroupChange = () => {
-  //   if(this.state.route==='nemeses') {
-  //     this.setState({
-  //       route: 'allies'
-  //     })
-  //   } else {
-  //     this.setState({
-  //       route: 'nemeses'
-  //     })
-  //   }
-  // }
+  groupChange = () => {
+    if(this.state.route==='nemeses') {
+      this.setState({
+        route: 'allies'
+      })
+    } else {
+      this.setState({
+        route: 'nemeses'
+      })
+    }
+  }
 
   render() {
     const filteredVillains = this.state.villains.filter(villain => {
@@ -48,6 +48,7 @@ class App extends Component {
         <Sticky>
           <h1 className='f1'>Spider-Man's Greatest Nemeses</h1>
           <SearchBox onSearchChange={this.onSearchChange}/>
+          <button onClick={this.groupChange}>Switch to Allies</button>
         </Sticky>
           <div style={{paddingTop: '280px', zIndex: '0', overflow: 'auto', width: '100%', background: 'linear-gradient(to right, rgba(165,0,0,1) 0%, rgba(50,104,189,1) 100%'}}>
             <CardList villains={filteredVillains} allies={filteredAllies} route={this.state.route}/>
